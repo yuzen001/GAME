@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Main11Activity extends AppCompatActivity {
     private boolean ReturnGame;
     private int guessTime;
     private int random;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main11);
         final Button button = (Button) findViewById(R.id.button);
         edittext = (EditText) findViewById(R.id.editText2);
 
@@ -29,18 +29,18 @@ public class MainActivity extends AppCompatActivity {
         random = intent.getIntExtra("random",0);
 
         if (ReturnGame == true){
-            random =  (int)(Math.random()* 10+1);
+            random =  (int)(Math.random()* 60+1);
             intent.putExtra("ReturnGame", false);
         }
 
         button.setOnClickListener(new View.OnClickListener() {
 
-                public void onClick (View v){
-                    if(edittext.getText().toString().matches("") ) {
-                        Toast toast = Toast.makeText(MainActivity.this, "還沒輸入數字唷", Toast.LENGTH_LONG);
-                        toast.show();}
-                    else {
-                    Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+            public void onClick (View v){
+                if(edittext.getText().toString().matches("") ) {
+                    Toast toast = Toast.makeText(Main11Activity.this, "還沒輸入數字唷", Toast.LENGTH_LONG);
+                    toast.show();}
+                else {
+                    Intent intent = new Intent(Main11Activity.this, Main12Activity.class);
                     intent.putExtra("random", random);
                     intent.putExtra("portal", Integer.valueOf(edittext.getText().toString()));
                     intent.putExtra("guessTime", guessTime);
@@ -48,5 +48,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-            }
-        }
+    }
+}

@@ -15,7 +15,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="第一關1~10"
+            android:text="第七關1~70"
             android:textSize="64dp"/>
 
         <TextView

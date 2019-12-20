@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main14Activity extends AppCompatActivity {
     private int guessTime;
     private int random;
     private int input_N;
@@ -19,7 +19,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main14);
         final Button button = (Button) findViewById(R.id.button);
 
         Intent intent=getIntent();
@@ -39,7 +39,7 @@ public class Main2Activity extends AppCompatActivity {
 
             button.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(Main2Activity.this, Main3Activity.class);
+                    Intent intent = new Intent(Main14Activity.this, Main15Activity.class);
                     startActivity(intent);
                 }
             });
@@ -53,7 +53,7 @@ public class Main2Activity extends AppCompatActivity {
 
             button.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(Main2Activity.this, MainActivity.class);
+                    Intent intent = new Intent(Main14Activity.this, Main13Activity.class);
                     intent.putExtra("guessTime",guessTime );
                     intent.putExtra("random", random);
                     intent.putExtra("ReturnGame", ReturnGame);
@@ -70,7 +70,7 @@ public class Main2Activity extends AppCompatActivity {
 
             button.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(Main2Activity.this, MainActivity.class);
+                    Intent intent = new Intent(Main14Activity.this, Main13Activity.class);
                     intent.putExtra("guessTime",guessTime );
                     intent.putExtra("random", random);
                     intent.putExtra("ReturnGame", ReturnGame);
